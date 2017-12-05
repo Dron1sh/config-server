@@ -1,0 +1,15 @@
+server:
+  port: 8761
+eureka:
+#  instance:
+#    hostname: localhost
+  client:
+#  通过eureka.client.registerWithEureka：false和fetchRegistry：false来表明自己是一个eureka server
+#registerWithEureka表示是否注册自身到eureka服务器
+    register-with-eureka: false
+#    fetchRegistry表示是否从eureka服务器获取注册信息
+    fetch-registry: false
+    service-url:
+    #设置eureka服务器所在的地址，查询服务和注册服务都需要依赖这个地址。
+      defaultZone: http://127.0.0.1:8761/eureka/
+
